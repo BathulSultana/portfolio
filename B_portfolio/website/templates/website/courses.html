@@ -1,0 +1,142 @@
+{% extends 'website/base.html' %}
+{% block title %}Certifications — Bathul Sultana{% endblock %}
+{% block nav_courses %}active{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="section-eyebrow">Verified Learning</p>
+    <h1>Certifications <span class="accent">&</span> Courses</h1>
+    <p>Continuously upskilling — from AI fundamentals to cloud infrastructure.</p>
+  </div>
+</section>
+
+<section class="courses-section">
+
+  <!-- Filter Tabs -->
+  <div class="courses-filter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="ai">AI / ML</button>
+    <button class="filter-btn" data-filter="cloud">Cloud</button>
+    <button class="filter-btn" data-filter="rpa">Automation</button>
+    <button class="filter-btn" data-filter="python">Python</button>
+  </div>
+
+  <!-- Certification Cards -->
+  <div class="courses-grid">
+
+    <div class="course-card" data-category="python">
+      <div class="course-accent ibm"></div>
+      <div class="course-header">
+        <div class="course-logo ibm-logo"><i class="fas fa-cube"></i></div>
+        <span class="cert-verified"><i class="fas fa-circle-check"></i> Certified</span>
+      </div>
+      <div class="course-body">
+        <span class="course-platform">IBM</span>
+        <h3>Python for Data Science</h3>
+        <p>Core Python programming, data manipulation, Jupyter Notebooks, and introductory data science workflows using IBM's curriculum.</p>
+        <div class="course-skills">
+          <span class="cskill">Python</span>
+          <span class="cskill">Jupyter</span>
+          <span class="cskill">Pandas</span>
+        </div>
+        <a href="#" class="course-link" target="_blank">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+
+    <div class="course-card" data-category="ai">
+      <div class="course-accent salesforce"></div>
+      <div class="course-header">
+        <div class="course-logo sf-logo"><i class="fab fa-salesforce"></i></div>
+        <span class="cert-verified"><i class="fas fa-circle-check"></i> Certified</span>
+      </div>
+      <div class="course-body">
+        <span class="course-platform">Salesforce</span>
+        <h3>AI Associate</h3>
+        <p>Salesforce's foundational AI certification covering AI ethics, machine learning concepts, and AI-powered CRM features.</p>
+        <div class="course-skills">
+          <span class="cskill">AI Ethics</span>
+          <span class="cskill">ML Concepts</span>
+          <span class="cskill">CRM AI</span>
+        </div>
+        <a href="#" class="course-link" target="_blank">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+
+    <div class="course-card" data-category="cloud">
+      <div class="course-accent aviatrix"></div>
+      <div class="course-header">
+        <div class="course-logo av-logo"><i class="fas fa-cloud"></i></div>
+        <span class="cert-verified"><i class="fas fa-circle-check"></i> Certified</span>
+      </div>
+      <div class="course-body">
+        <span class="course-platform">Aviatrix</span>
+        <h3>Multicloud Network Associate</h3>
+        <p>Multi-cloud networking fundamentals covering AWS, Azure & GCP connectivity, security, and transit architecture patterns.</p>
+        <div class="course-skills">
+          <span class="cskill">AWS</span>
+          <span class="cskill">Azure</span>
+          <span class="cskill">GCP</span>
+          <span class="cskill">Networking</span>
+        </div>
+        <a href="#" class="course-link" target="_blank">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+
+    <div class="course-card" data-category="rpa">
+      <div class="course-accent aa"></div>
+      <div class="course-header">
+        <div class="course-logo aa-logo"><i class="fas fa-robot"></i></div>
+        <span class="cert-verified"><i class="fas fa-circle-check"></i> Certified</span>
+      </div>
+      <div class="course-body">
+        <span class="course-platform">Automation Anywhere</span>
+        <h3>RPA Professional</h3>
+        <p>Professional-level Robotic Process Automation — bot development, process mapping, and enterprise automation design with Automation 360.</p>
+        <div class="course-skills">
+          <span class="cskill">RPA</span>
+          <span class="cskill">Bot Dev</span>
+          <span class="cskill">Automation 360</span>
+        </div>
+        <a href="#" class="course-link" target="_blank">View Certificate <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Learning Focus Banner -->
+  <div class="learning-banner">
+    <div class="lb-icon"><i class="fas fa-book-open"></i></div>
+    <div class="lb-text">
+      <h3>Always Learning</h3>
+      <p>Currently exploring <strong>Generative AI</strong>, <strong>LLMs</strong>, and <strong>AWS Solutions Architect</strong> to deepen expertise in cloud-native AI systems.</p>
+    </div>
+    <a href="{% url 'contact' %}" class="btn-primary">Collaborate →</a>
+  </div>
+
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards      = document.querySelectorAll('.course-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(card => {
+        const show = f === 'all' || card.dataset.category === f;
+        card.style.opacity   = show ? '1'    : '0';
+        card.style.transform = show ? 'scale(1)' : 'scale(0.95)';
+        card.style.pointerEvents = show ? 'all' : 'none';
+        card.style.position  = show ? 'relative' : 'absolute';
+        card.style.display   = show ? 'flex' : 'none';
+      });
+    });
+  });
+</script>
+{% endblock %}

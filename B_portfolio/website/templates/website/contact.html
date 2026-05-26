@@ -1,0 +1,121 @@
+{% extends 'website/base.html' %}
+{% block title %}Contact — Bathul Sultana{% endblock %}
+{% block nav_contact %}active{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="section-eyebrow">Let's Connect</p>
+    <h1>Get In <span class="accent">Touch</span></h1>
+    <p>Open to internships, full-time roles, and collaborative projects.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+
+  <!-- ─── CLICKABLE ICON TABS ─── -->
+  <div class="contact-tabs-wrap">
+    <p class="section-eyebrow" style="text-align:center;margin-bottom:1.5rem">Click any to connect instantly</p>
+    <div class="contact-tabs">
+
+      <a href="mailto:bathulsultana@gmail.com" class="contact-tab" title="Send Email">
+        <div class="ctab-icon email-col"><i class="fas fa-envelope"></i></div>
+        <div class="ctab-text">
+          <span class="ctab-label">Email</span>
+          <span class="ctab-value">bathulsultana@gmail.com</span>
+        </div>
+        <i class="fas fa-arrow-up-right-from-square ctab-arrow"></i>
+      </a>
+
+      <a href="tel:+917207528462" class="contact-tab" title="Call">
+        <div class="ctab-icon phone-col"><i class="fas fa-phone"></i></div>
+        <div class="ctab-text">
+          <span class="ctab-label">Phone</span>
+          <span class="ctab-value">+91 72075 28462</span>
+        </div>
+        <i class="fas fa-arrow-up-right-from-square ctab-arrow"></i>
+      </a>
+
+      <a href="https://github.com/BathulSultana" target="_blank" class="contact-tab" title="GitHub">
+        <div class="ctab-icon github-col"><i class="fab fa-github"></i></div>
+        <div class="ctab-text">
+          <span class="ctab-label">GitHub</span>
+          <span class="ctab-value">github.com/BathulSultana</span>
+        </div>
+        <i class="fas fa-arrow-up-right-from-square ctab-arrow"></i>
+      </a>
+
+      <a href="https://leetcode.com/u/Bathul_Sultana/" target="_blank" class="contact-tab" title="LeetCode">
+        <div class="ctab-icon leet-col"><i class="fas fa-code"></i></div>
+        <div class="ctab-text">
+          <span class="ctab-label">LeetCode</span>
+          <span class="ctab-value">leetcode.com/u/Bathul_Sultana</span>
+        </div>
+        <i class="fas fa-arrow-up-right-from-square ctab-arrow"></i>
+      </a>
+
+      <a href="https://linkedin.com/in/bathulsultana" target="_blank" class="contact-tab" title="LinkedIn">
+        <div class="ctab-icon linkedin-col"><i class="fab fa-linkedin-in"></i></div>
+        <div class="ctab-text">
+          <span class="ctab-label">LinkedIn</span>
+          <span class="ctab-value">linkedin.com/in/bathulsultana</span>
+        </div>
+        <i class="fas fa-arrow-up-right-from-square ctab-arrow"></i>
+      </a>
+
+      <a href="https://wa.me/917207528462" target="_blank" class="contact-tab" title="WhatsApp">
+        <div class="ctab-icon whatsapp-col"><i class="fab fa-whatsapp"></i></div>
+        <div class="ctab-text">
+          <span class="ctab-label">WhatsApp</span>
+          <span class="ctab-value">+91 72075 28462</span>
+        </div>
+        <i class="fas fa-arrow-up-right-from-square ctab-arrow"></i>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ─── CONTACT FORM ─── -->
+  <div class="contact-form-section">
+    <div class="contact-form-intro">
+      <h2>Send a Message</h2>
+      <p>
+        Whether you have a project in mind, a job opportunity, or just want to say hello —
+        I'd love to hear from you. I typically respond within 24 hours.
+      </p>
+      <div class="form-sidebar-info">
+        <div class="fs-item"><i class="fas fa-map-marker-alt"></i> Kadiri, Andhra Pradesh, India</div>
+        <div class="fs-item"><i class="fas fa-graduation-cap"></i> KL University · B.Tech Graduate 2026</div>
+        <div class="fs-item"><i class="fas fa-circle green-dot"></i> Available for opportunities</div>
+      </div>
+    </div>
+
+    <form method="POST" action="{% url 'contact' %}" class="contact-form">
+      {% csrf_token %}
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name"><i class="fas fa-user"></i> Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+          <input type="email" id="email" name="email" placeholder="john@company.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Job Opportunity / Internship / Collaboration" required />
+      </div>
+      <div class="form-group">
+        <label for="message"><i class="fas fa-message"></i> Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell me about the opportunity or project..." required></textarea>
+      </div>
+      <button type="submit" class="btn-primary btn-full">
+        <i class="fas fa-paper-plane"></i> Send Message
+      </button>
+    </form>
+  </div>
+
+</section>
+{% endblock %}

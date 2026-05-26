@@ -1,0 +1,192 @@
+{% extends 'website/base.html' %}
+{% block title %}Bathul Sultana — AI & Data Science Engineer{% endblock %}
+{% block nav_home %}active{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-pulse"></span>
+      Open to Opportunities
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-hi">Hello, I'm</span>
+      <span class="hero-name">Katlagal<br>Bathul Sultana</span>
+    </h1>
+    <p class="hero-role">
+      <span class="role-chip"><i class="fas fa-robot"></i> AI Engineer</span>
+      <span class="role-sep">×</span>
+      <span class="role-chip"><i class="fas fa-chart-bar"></i> Data Scientist</span>
+      <span class="role-sep">×</span>
+      <span class="role-chip"><i class="fab fa-python"></i> Python Dev</span>
+    </p>
+    <p class="hero-sub">
+      Software Engineer from <strong>KL University</strong> (B.Tech AI & DS, CGPA 9.33) specialising in
+      AI, Data Science & Cloud Computing. I turn raw data and ideas into intelligent, real-world
+      solutions.
+    </p>
+    <div class="hero-cta">
+      <a href="{% url 'contact' %}" class="btn-primary">
+        <i class="fas fa-paper-plane"></i> Get in Touch
+      </a>
+      <a href="https://github.com/BathulSultana" target="_blank" class="btn-ghost">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://leetcode.com/u/Bathul_Sultana/" target="_blank" class="btn-ghost">
+        <i class="fas fa-code"></i> LeetCode
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">9.33</span>
+        <span class="stat-label">CGPA</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">4+</span>
+        <span class="stat-label">Certifications</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">2026</span>
+        <span class="stat-label">Graduated</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="avatar-ring">
+      <div class="avatar-core">
+        <span class="avatar-initials">KBS</span>
+      </div>
+    </div>
+    <div class="orbit orbit-1">
+      <div class="orbit-icon" style="--deg:0deg"><i class="fab fa-python"></i></div>
+      <div class="orbit-icon" style="--deg:90deg"><i class="fas fa-brain"></i></div>
+      <div class="orbit-icon" style="--deg:180deg"><i class="fab fa-aws"></i></div>
+      <div class="orbit-icon" style="--deg:270deg"><i class="fas fa-database"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ TECH STACK ═══════════════════════════ -->
+<section class="stack-section">
+  <p class="section-eyebrow">Technical Arsenal</p>
+  <h2 class="section-title">Skills & <span class="accent">Stack</span></h2>
+  <div class="stack-grid">
+    <div class="stack-card">
+      <div class="stack-icon python"><i class="fab fa-python"></i></div>
+      <h4>Languages</h4>
+      <p>Python · C · SQL · JavaScript</p>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon ai"><i class="fas fa-brain"></i></div>
+      <h4>AI / ML</h4>
+      <p>TensorFlow · PyTorch · Gen AI · Pandas · NumPy</p>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon web"><i class="fas fa-globe"></i></div>
+      <h4>Web</h4>
+      <p>HTML · CSS · JavaScript · Django</p>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon cloud"><i class="fab fa-aws"></i></div>
+      <h4>Cloud & Tools</h4>
+      <p>AWS · Git · GitHub · Power BI · VS Code</p>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon cs"><i class="fas fa-microchip"></i></div>
+      <h4>Core CS</h4>
+      <p>DSA · OOPs · DBMS · Operating Systems</p>
+    </div>
+    <div class="stack-card">
+      <div class="stack-icon data"><i class="fas fa-chart-pie"></i></div>
+      <h4>Data Analytics</h4>
+      <p>Matplotlib · Seaborn · Plotly · EDA · Power BI</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+<section class="projects-section">
+  <p class="section-eyebrow">What I've Built</p>
+  <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+  <div class="projects-grid">
+
+    <div class="project-card project-featured">
+      <div class="project-glow"></div>
+      <div class="project-top">
+        <div class="project-tags">
+          <span class="ptag">Deep Learning</span>
+          <span class="ptag">NLP</span>
+          <span class="ptag">Streamlit</span>
+        </div>
+        <a href="https://github.com/BathulSultana" target="_blank" class="project-gh"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="project-icon-large"><i class="fas fa-robot"></i></div>
+      <h3>AI-Powered Student Assistance Chatbot</h3>
+      <p>Intelligent chatbot for student queries on admissions, scholarships, and placements. Built an NLP pipeline with intent detection, real-time data retrieval, and deployed on Streamlit.</p>
+      <ul class="project-bullets">
+        <li>NLP pipeline with text preprocessing & intent detection</li>
+        <li>Real-time backend data retrieval integration</li>
+        <li>Interactive Streamlit UI for seamless communication</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-tags">
+          <span class="ptag">Data Analytics</span>
+          <span class="ptag">Pandas</span>
+          <span class="ptag">Plotly</span>
+        </div>
+        <a href="https://github.com/BathulSultana" target="_blank" class="project-gh"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="project-icon-large" style="color:var(--accent-2)"><i class="fas fa-magnifying-glass-chart"></i></div>
+      <h3>DataLens — Full Data Analysis Toolkit</h3>
+      <p>Interactive Streamlit web app for end-to-end data analysis without coding. Integrated EDA, cleaning, filtering, and visual reports with Pandas, NumPy, Matplotlib, Seaborn & Plotly.</p>
+      <ul class="project-bullets">
+        <li>No-code EDA & data cleaning workflow</li>
+        <li>Automated statistical summaries & visual reports</li>
+        <li>Real-time dataset exploration</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-tags">
+          <span class="ptag">Machine Learning</span>
+          <span class="ptag">Scikit-learn</span>
+        </div>
+        <a href="https://github.com/BathulSultana" target="_blank" class="project-gh"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="project-icon-large" style="color:var(--accent-3)"><i class="fas fa-virus-covid"></i></div>
+      <h3>COVID-19 Predictions Using ML</h3>
+      <p>ML model to forecast COVID-19 infection trends with 85% accuracy. Applied data preprocessing, feature engineering, and model evaluation to produce reliable predictions.</p>
+      <ul class="project-bullets">
+        <li>85% prediction accuracy</li>
+        <li>Feature engineering & data preprocessing</li>
+        <li>Infection trend forecasting</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CTA BANNER ═══════════════════════════ -->
+<section class="cta-banner">
+  <div class="cta-inner">
+    <h2>Let's build something <span class="accent">intelligent</span> together.</h2>
+    <p>Available for internships, full-time roles & freelance projects.</p>
+    <a href="{% url 'contact' %}" class="btn-primary"><i class="fas fa-arrow-right"></i> Start a Conversation</a>
+  </div>
+</section>
+
+{% endblock %}
